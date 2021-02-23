@@ -7,6 +7,10 @@ defmodule RocketpayWeb.ErrorView do
   #   %{errors: %{detail: "Internal Server Error"}}
   # end
 
+  def render("400.json", _errors) do
+    %{errors: %{detail: "Bad Request"}}
+  end
+
   # By default, Phoenix returns the status message from
   # the template name. For example, "404.json" becomes
   # "Not Found".
